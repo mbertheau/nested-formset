@@ -1,3 +1,5 @@
+import django
+
 from django.forms.models import (
     BaseInlineFormSet,
     inlineformset_factory,
@@ -61,13 +63,17 @@ def nestedformset_factory(parent_model, model, nested_formset, form=ModelForm,
         'fields': fields,
         'exclude': exclude,
         'max_num': max_num,
-        'widgets': widgets,
-        'validate_max': validate_max,
-        'localized_fields': localized_fields,
-        'labels': labels,
-        'help_texts': help_texts,
-        'error_messages': error_messages,
     }
+
+    if django.VERSION >= (1, 6):
+        kwargs.update({
+            'widgets': widgets,
+            'validate_max': validate_max,
+            'localized_fields': localized_fields,
+            'labels': labels,
+            'help_texts': help_texts,
+            'error_messages': error_messages,
+        })
 
     NestedFormSet = inlineformset_factory(parent_model, model, **kwargs)
     NestedFormSet.nested_formset_class = nested_formset
