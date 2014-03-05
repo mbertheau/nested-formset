@@ -5,7 +5,7 @@ from django.views.generic import (
     UpdateView,
 )
 
-from nested_formset import nested_formset_factory
+from nested_formset import nestedformset_factory
 
 from blocks import models
 
@@ -32,7 +32,7 @@ class EditBuildingsView(UpdateView):
 
     def get_form_class(self):
 
-        return nested_formset_factory(
+        return nestedformset_factory(
             models.Block,
             models.Building,
             models.Tenant,
