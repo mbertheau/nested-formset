@@ -2,8 +2,8 @@
 Nested Formsets with Django
 ===========================
 
-.. image:: https://travis-ci.org/nyergler/nested-formset.png?branch=master
-   :target: https://travis-ci.org/nyergler/nested-formset
+.. image:: https://travis-ci.org/mbertheau/nested-formset.png?branch=master
+   :target: https://travis-ci.org/mbertheau/nested-formset
 
 Formsets_ are a Django abstraction that make it easier to manage
 multiple instances of a single Form_ on a page. In 2009 I wrote a
@@ -25,8 +25,9 @@ and creating a virtualenv.
    $ virtualenv .
    $ source bin/activate
    $ python setup.py develop
+   $ pip install -r requirements_test.txt
 
-The last line will install the installation and test dependencies.
+The last two lines will install the installation and test dependencies.
 
 To run the unit test suite, run the following from within the
 virtualenv::
