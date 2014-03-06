@@ -2,8 +2,8 @@
 Nested Formsets with Django
 ===========================
 
-.. image:: https://travis-ci.org/nyergler/nested-formset.png?branch=master
-   :target: https://travis-ci.org/nyergler/nested-formset
+.. image:: https://travis-ci.org/mbertheau/nested-formset.png?branch=master
+   :target: https://travis-ci.org/mbertheau/nested-formset
 
 Formsets_ are a Django abstraction that make it easier to manage
 multiple instances of a single Form_ on a page. In 2009 I wrote a
